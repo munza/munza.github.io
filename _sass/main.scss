@@ -1,14 +1,7 @@
-// --------------------
-// Variables
-// --------------------
-
 $color-bg-base: #ffffff;
 $color-font-base: #000000;
 $font-family-base: 'IBM Plex Sans', sans-serif;
-
-// --------------------
-// Body
-// --------------------
+$font-family-heading: 'Miriam Libre', sans-serif;
 
 body {
   background: $color-bg-base;
@@ -16,64 +9,66 @@ body {
   font-family: $font-family-base;
 }
 
-// --------------------
-// Container
-// --------------------
-
-.container {
-  max-width: 50rem;
-}
-
-// --------------------
-// Headings
-// --------------------
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-family: $font-family-heading;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+a {
+  color: #333;
+  &:hover,
+  &:focus {
+    color: #000;
+  }
+}
+
+.container {
+  max-width: 70rem;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+section.header {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.title {
+  font-size: 2.5em;
+  max-width: 48rem;
   &:before {
     position: absolute;
-    margin-left: -1em;
-    opacity: 0.25;
+    width: 27rem;
+    height: 1.5em;
+    z-index: -100;
+    margin-top: 0.6em;
+    margin-left: -0.6em;
+    content: '';
+    background: #eeeeee;
   }
 }
 
-h1:before {
-  content: '#';
+.lead {
+  font-size: 1.35em;
 }
 
-h2:before {
-  content: '##';
+.inline {
+  display: inline;
 }
 
-h3:before {
-  content: '###';
+.mt-2 {
+  margin-top: 2em;
 }
 
-h4:before {
-  content: '####';
-}
-
-h5:before {
-  content: '#####';
-}
-
-h6:before {
-  content: '######';
-}
-
-// --------------------
-// Link
-// --------------------
-
-.link {
-  &:before {
-    content: '[';
-  }
-  &:after {
-    content: ']';
-  }
+.mt-4 {
+  margin-top: 4em;
 }
