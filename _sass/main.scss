@@ -39,11 +39,12 @@ a {
 
 section.header {
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 4rem;
 }
 
 .title {
-  font-size: 2.5em;
+  font-size: calc(32px + (48 - 32) * ((100vw - 300px) / (1920 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1920 - 300)));
   max-width: 48rem;
   &:before {
     position: absolute;
