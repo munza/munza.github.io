@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
 
-    <title>{{ page.title }}
-      -
-      {{ site.title }}</title>
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/flexboxgrid@6.3.1/dist/flexboxgrid.min.css" integrity="sha256-/8+sU56ayrJGahG9mmcUaNEghbavaceGybkdqO96Kk0=" rel="stylesheet"/>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/normalize-css@2.3.1/normalize.css" integrity="sha256-oQhE1gzQ/RLRlHgKfVUhrAe03FJbQLmTjY5ngEJPhdg=" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|IBM+Plex+Sans:400,400i,700,700i&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body>
-    <div class="container">
-      {{ content }}
-    </div>
-  </body>
+  <!-- Title -->
+  <title>{{ page.title }} - {{ site.title }}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+
+<body>
+  <div class="container max-w-screen-lg mx-auto px-8 md:px-0 8font-sans tracking-wide">
+    {{ content }}
+  </div>
+</body>
+
 </html>
